@@ -1,78 +1,56 @@
-/* ===========================
-   ANIMATIONS & HOVER EFFECTS
-   =========================== */
-
-/* Navbar Hover and Click Animations */
-.navbar a {
-    transition: all 0.3s ease-in-out;
-    position: relative;
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-.navbar a:hover {
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 5px;
-    transform: scale(1.1);
+/* Navbar Animation */
+.navbar li {
+    animation: fadeIn 0.8s ease-in-out forwards;
+    opacity: 0;
 }
 
-.navbar a:active {
-    transform: scale(0.95);
-    background: rgba(255, 255, 255, 0.3);
+.navbar li:nth-child(1) { animation-delay: 0.2s; }
+.navbar li:nth-child(2) { animation-delay: 0.4s; }
+.navbar li:nth-child(3) { animation-delay: 0.6s; }
+.navbar li:nth-child(4) { animation-delay: 0.8s; }
+.navbar li:nth-child(5) { animation-delay: 1s; }
+
+/* Section Titles */
+h1, h2 {
+    animation: fadeIn 1s ease-in-out;
 }
 
-/* Menu Hover Animation */
-.menu li {
-    transition-property: background;
-    transition-duration: .4s;
-    transition-delay: 0s;
-    transition-timing-function: ease-in-out;
-    cursor: pointer;
+/* Image Hover Effect */
+.image-container {
+    transition: transform 0.3s ease-in-out;
 }
 
-.menu li:hover {
-    color: #f00;
-    background-color: rgba(100, 65, 0, 0.3);
+.image-container:hover {
+    transform: scale(1.05);
 }
 
-/* Image Hover Effects */
-.image-container img {
-    transition: transform 0.3s;
-}
-
-.image-container:hover img {
-    transform: scale(1.2);
-}
-
+/* Overlay Animation */
 .overlay {
-    transition: opacity 0.3s;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
 }
 
 .image-container:hover .overlay {
     opacity: 1;
 }
 
-/* Photo Overlay Effects */
-.photo-overlay {
-    opacity: 0;
-    transition: opacity .5s;
-    border-radius: 10px;
-    cursor: pointer;
+/* Button Hover Effect */
+.submit input {
+    transition: background-color 0.3s ease-in-out;
 }
 
-.photo-overlay:hover {
-    opacity: 1;
-}
-
-.photo img {
-    transition: transform .5s;
-    transform-origin: 50% 50%;
-}
-
-.photo:hover img {
-    transform: scale(1.1);
-}
-
-/* Button Hover */
-input[type="submit"]:hover {
-    background: #e68900;
-    box-shadow: inset 1px 2px 15px 0 rgba(0, 0, 0, 0.5);
+.submit input:hover {
+    background-color: #e0850b;
 }
