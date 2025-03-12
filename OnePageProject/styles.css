@@ -8,6 +8,7 @@
 /* Body Styling */
 body {
     font-family: 'Poppins', sans-serif;
+    font-size: large;
     background-color: bisque;
     color: #333;
     line-height: 1.6;
@@ -62,7 +63,7 @@ nav ul li a:hover {
 section {
     padding: 50px;
     margin: 30px 0;
-    background: rgb(170, 168, 168);
+    background: rgb(255, 232, 232);
     border-radius: 12px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     min-height: 80vh;
@@ -110,7 +111,7 @@ h1, h2, h3 {
 form {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 15px; /* Adjusted margin between inputs */
     width: 60%;
     margin: 0 auto;
     background: #fff;
@@ -119,29 +120,37 @@ form {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
+/* Labels */
 form label {
     font-size: 16px;
     font-weight: bold;
 }
 
+/* Input and Textarea Styling */
 form input, form textarea {
-    padding: 12px;
+    width: 100%; /* Ensures inputs take full width of form */
+    padding: 14px; /* Improved padding for better usability */
+    margin: 8px 0; /* Added margin between inputs */
     font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    transition: border 0.3s;
+    border: 2px solid #ccc; /* More defined border */
+    border-radius: 10px; /* Rounded corners */
+    transition: border 0.3s, box-shadow 0.3s;
 }
 
+/* Focus Effects */
 form input:focus, form textarea:focus {
     border-color: #444;
+    box-shadow: 0 0 8px rgba(68, 68, 68, 0.3); /* Subtle glow effect */
 }
 
+/* Button Styling */
 form button {
-    padding: 12px;
+    padding: 14px;
+    width: 100%; /* Button takes full form width */
     background: linear-gradient(135deg, #222, #555);
     color: white;
     border: none;
-    border-radius: 8px;
+    border-radius: 10px; /* Consistent border-radius */
     font-size: 16px;
     cursor: pointer;
     transition: background 0.3s, transform 0.2s;
@@ -151,6 +160,7 @@ form button:hover {
     background: linear-gradient(135deg, #444, #777);
     transform: scale(1.05);
 }
+
 
 /* Video Styling */
 #video iframe {
